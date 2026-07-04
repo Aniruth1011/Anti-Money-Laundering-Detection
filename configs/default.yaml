@@ -1,0 +1,30 @@
+data:
+  amlsim_output_dir: data/AMLSim/outputs/sample
+  transactions_path: data/transactions.csv
+  accounts_path: data/accounts.csv
+  alert_accounts_path: data/alert_accounts.csv
+  alert_transactions_path: data/alert_transactions.csv
+  sar_accounts_path: data/sar_accounts.csv
+  tx_log_path: data/tx_log.csv
+  label_column: is_fraud
+  timestamp_column: timestamp
+  sender_column: sender_account
+  receiver_column: receiver_account
+  amount_column: amount
+  type_column: transaction_type
+
+features:
+  preprocessing_version: v1
+  feature_version: v1
+  graph_top_n_betweenness: 5000
+  node2vec_dimensions: 16
+ 
+training:
+  test_size: 0.2
+  random_state: 42
+  contamination: 0.02
+  experiment_name: aml-fraud-detection
+
+mlflow:
+  tracking_uri: mlruns
+  registry_model_name: aml_fraud_best_model
