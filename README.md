@@ -94,17 +94,6 @@ Endpoints:
 
 `aml_fraud.streaming.ReplayEngine` replays the historical dataset in timestamp order. The replay engine emits plain events so Kafka or another transport can be added later without changing feature or inference code.
 
-## Notebooks
-
-The notebooks are lightweight workflow guides:
-
-- `01_eda.ipynb`: fraud distribution, amounts, types, account stats.
-- `02_feature_engineering.ipynb`: engineered transaction, account, and graph features.
-- `03_graph_analysis.ipynb`: graph inspection, centrality, fan-in, cycles.
-- `04_model_comparison.ipynb`: metrics, latency, ROC and PR comparison.
-- `05_mlflow_analysis.ipynb`: experiments, best runs, registered models.
-- `06_streaming_demo.ipynb`: chronological replay and streaming predictions.
-
 ## Notes on Anomalib
 
 Anomalib is image-anomaly focused. This project documents it as a benchmark option but does not force image-first models like PatchCore onto raw tabular AML transactions. The main emphasis remains custom tabular and graph implementations.
